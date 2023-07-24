@@ -7,6 +7,7 @@ ENV LC_ALL=en_US.UTF-8
 ENV LC_CTYPE=en_US.UTF-8
 ENV LC_MESSAGES=en_US.UTF-8
 ENV LC_COLLATE=en_US.UTF-8
+ENV TZ=Europe/Amsterdam
 
 LABEL maintainer="Tomohisa Kusano <siomiz@gmail.com>" \
       contributors="See CONTRIBUTORS file <https://github.com/siomiz/SoftEtherVPN/blob/master/CONTRIBUTORS>"
@@ -35,6 +36,7 @@ ENV LC_ALL=en_US.UTF-8
 ENV LC_CTYPE=en_US.UTF-8
 ENV LC_MESSAGES=en_US.UTF-8
 ENV LC_COLLATE=en_US.UTF-8
+ENV TZ=Europe/Amsterdam
 
 # Install necessary build dependencies using zypper (openSUSE package manager)
 RUN zypper --non-interactive in gcc make ncurses-devel libopenssl-devel readline-devel zip zlib-devel unzip \
@@ -57,6 +59,7 @@ ENV LC_ALL=en_US.UTF-8
 ENV LC_CTYPE=en_US.UTF-8
 ENV LC_MESSAGES=en_US.UTF-8
 ENV LC_COLLATE=en_US.UTF-8
+ENV TZ=Europe/Amsterdam
 
 RUN zypper --non-interactive in bash iptables openssl-devel zip unzip \
     && chmod +x /entrypoint.sh /gencert.sh \
